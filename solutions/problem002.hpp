@@ -1,14 +1,14 @@
-#ifndef PROBLEM_001_HPP
-#define PROBLEM_001_HPP
+#ifndef PROBLEM_002_HPP
+#define PROBLEM_002_HPP
 
 #include "../include/problem.hpp"
 
-class Problem001 : public Problem {
+class Problem002 : public Problem {
 public:
 
-	Problem001() {
-		ID = 001;
-		_name = "Multiples of 3 or 5";
+	Problem002() {
+		ID = 002;
+		_name = "Even Fibonacci Numbers";
 
 		ans = 0;
 	}
@@ -16,8 +16,14 @@ public:
 	void solve() override {
 		_timer.start();
 
-		for (int i = 3; i < 1000; ++i) {
-			if (i % 3 == 0 || i % 5 == 0) { ans += i; }
+		ans = 2; // Starting with 1 (not even) and 2
+		int n1 = 1, n2 = 2, n3 = n1 + n2;
+
+		while (n3 < 4000000) {
+			n3 = n2 + n1;
+			n1 = n2, n2 = n3;
+
+			if (n3 % 2 == 0) { ans += n3; }
 		}
 
 		_timer.end();
@@ -35,4 +41,4 @@ private:
 	int ans;
 };
 
-#endif // !PROBLEM_001_HPP
+#endif // !PROBLEM_002_HPP

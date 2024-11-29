@@ -24,4 +24,4 @@ protected:
 private:
 };
 
-#endif // !PROBLEM_XXX_HPP
+#endif // !PROBLEM_002_HPP

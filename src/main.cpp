@@ -10,6 +10,7 @@ int main() {
 	populate_problems();
 
 	// Gauntlet
+	std::cout << "Running the gauntlet...\n";
 	for (auto& p : problem_list) {
 		p->solve();
 		p->print_solution();
@@ -17,7 +18,6 @@ int main() {
 }
 
 void populate_problems() {
-	
-
 	problem_list.push_back(std::make_unique<Problem001>());
+	problem_list.push_back(std::make_unique<Problem002>());
 }
