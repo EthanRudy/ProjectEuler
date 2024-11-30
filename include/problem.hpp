@@ -1,9 +1,11 @@
 #ifndef PROBLEM_HPP
 #define PROBLEM_HPP
 
+#include <algorithm>
 #include <iostream>
 
 #include "timer.hpp"
+#include "prime_helper.hpp"
 
 class Problem {
 public:

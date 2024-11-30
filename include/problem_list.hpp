@@ -6,6 +6,7 @@
 
 #include "../solutions/problem001.hpp"
 #include "../solutions/problem002.hpp"
+#include "../solutions/problem003.hpp"
 
 
 #endif // !PROBLEM_LIST_HPP
