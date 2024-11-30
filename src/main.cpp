@@ -22,4 +22,5 @@ void populate_problems() {
 	problem_list.push_back(std::make_unique<Problem002>());
 	problem_list.push_back(std::make_unique<Problem003>());
 	problem_list.push_back(std::make_unique<Problem004>());
+	problem_list.push_back(std::make_unique<Problem005>());
 }
