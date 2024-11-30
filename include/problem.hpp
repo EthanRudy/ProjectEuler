@@ -6,6 +6,7 @@
 
 #include "timer.hpp"
 #include "prime_helper.hpp"
+#include "num_helper.hpp"
 
 class Problem {
 public:
