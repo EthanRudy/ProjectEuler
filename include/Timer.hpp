@@ -1,21 +1,66 @@
-#pragma once
+#ifndef TIMER_HPP
+#define TIMER_HPP
 
 #include <chrono>
+#include <string>
+#include <type_traits>
 
-template <typename HRClock = std::chrono::high_resolution_clock>
 class Timer {
 public:
-	Timer() : start_point(HRClock::now())
-	{}
 
-	template <typename Rep = typename HRClock::duration::rep, typename Units = HRClock::duration>
-	Rep get_duration() const {
-		return std::chrono::duration_cast<Units>(HRClock::now() - start_point).count();
+	Timer() = default;
+
+	void start() {
+		_start = std::chrono::high_resolution_clock::now();
 	}
 
+	void end() {
+		_end = std::chrono::high_resolution_clock::now();
+	}
 
+	const std::pair<int, std::string> duration() {
+		unsigned long long time = std::chrono::duration_cast<std::chrono::nanoseconds>(_end - _start).count();
+		int interval = 0;
+		/*
+		0 -> Nanoseconds
+		1 -> Microseconds
+		2 -> Milliseconds
+		3 -> Seconds
+		*/
+
+		while (time > 1000 && interval < 3) {
+			switch (interval) {
+			case 0:
+				++interval;
+				break;
+			case 1:
+				++interval;
+				break;
+			case 2:
+				++interval;
+			default: break;
+				
+			};
+
+			time /= 1000;
+		}
+
+		return std::pair<int, std::string>{ time, _interval_strings[interval] };
+	}
+
+	template <typename AllowedInterval, typename = std::enable_if_t<
+		std::is_same_v<AllowedInterval, std::chrono::seconds> ||
+		std::is_same_v<AllowedInterval, std::chrono::milliseconds> ||
+		std::is_same_v<AllowedInterval, std::chrono::microseconds> ||
+		std::is_same_v<AllowedInterval, std::chrono::nanoseconds>>>
+	const int duration() {
+		return std::chrono::duration_cast<AllowedInterval>(_end - _start).count();
+	}
+
+protected:
 private:
-	std::chrono::high_resolution_clock::time_point start_point;
+	std::chrono::time_point<std::chrono::high_resolution_clock> _start, _end;
+	std::string _interval_strings[4] = { "nanosecond", "microsecond", "millisecond", "second"};
 };
 
-using precise_timer = Timer<>;
+#endif // !TIMER_HPP

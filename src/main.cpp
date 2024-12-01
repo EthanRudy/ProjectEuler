@@ -1,22 +1,26 @@
-
+#include "../include/problem_list.hpp"
 #include <iostream>
+#include <thread>
 
-#include "../include/problems.hpp"
+std::vector<std::unique_ptr<Problem>> problem_list;
 
-/*
-	Solutions are build as sub classes
-	To run one, replace the code below
-	with the following template
+void populate_problems();
 
-	PXXX sol;
-	sol.run();
-
-	Replace the XXX with the number
-	of the solution you'd like to run
-	so 23 would be 023, 4 would be 004, etc
-*/
 int main() {
-	P043 sol;
-	sol.run();
-	return 0;
+	populate_problems();
+
+	// Gauntlet
+	std::cout << "Running the gauntlet...\n";
+	for (auto& p : problem_list) {
+		p->solve();
+		p->print_solution();
+	}
+}
+
+void populate_problems() {
+	problem_list.push_back(std::make_unique<Problem001>());
+	problem_list.push_back(std::make_unique<Problem002>());
+	problem_list.push_back(std::make_unique<Problem003>());
+	problem_list.push_back(std::make_unique<Problem004>());
+	problem_list.push_back(std::make_unique<Problem005>());
 }
