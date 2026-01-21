@@ -2,3 +2,7 @@
 /.vs/ProjectEuler/FileContentIndex
 /.vs
 /x64
+*.vcxproj
+*.filters
+ProjectEuler.vcxproj
+ProjectEuler.vcxproj
