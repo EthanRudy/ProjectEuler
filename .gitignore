@@ -6,3 +6,4 @@
 *.filters
 ProjectEuler.*
 *.vcxproj
+*.sln
