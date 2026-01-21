@@ -1,7 +1,4 @@
-\v17
-\x64
-\.vs
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
+/ProjectEuler/x64
+/.vs/ProjectEuler/FileContentIndex
+/.vs
+/x64
