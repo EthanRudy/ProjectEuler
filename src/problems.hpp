@@ -17,4 +17,5 @@ int solve_p012();
 std::string solve_p013(); 
 int solve_p014();
 long long solve_p015();
+int solve_p016();
 
