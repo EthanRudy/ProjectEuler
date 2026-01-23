@@ -12,3 +12,9 @@ int solve_p007();
 unsigned long long solve_p008();
 int solve_p009();
 unsigned long long solve_p010();
+int solve_p011();
+int solve_p012();
+std::string solve_p013(); 
+int solve_p014();
+long long solve_p015();
+
