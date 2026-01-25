@@ -20,4 +20,5 @@ long long solve_p015();
 int solve_p016();
 int solve_p017();
 int solve_p018();
+int solve_p019();
 
