@@ -35,3 +35,15 @@ inline void load_string_array(std::string filepath, std::vector<std::string>& ar
 		array.push_back(line);
 	}
 }
+
+inline void load_names(std::string filepath, std::vector<std::string>& array) {
+	std::ifstream file(filepath);
+	std::string line;
+	while (std::getline(file, line)) {
+		std::stringstream ss(line);
+		std::string name;
+		while (std::getline(ss, name, ',')) {
+			array.push_back(name.substr(1, name.length() - 2));
+		}
+	}
+}
