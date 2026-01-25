@@ -1554,4 +1554,21 @@ namespace big {
 
 	}
 
+	// Factorial
+	inline Integer factorial(int n) {
+		if (n < 0) {
+			throw IntegerException("n! of a value of n < 0 is not possible");
+		}
+		else if (n == 0) { 
+			return Integer(1); 
+		}
+		big::Integer ans = 1;
+
+		for (int i = 1; i <= n; ++i) {
+			ans *= i;
+		}
+
+		return ans;
+	}
+
 }
