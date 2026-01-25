@@ -1,5 +1,8 @@
 #include <iostream>
 #include "problems.hpp"
+#include "utils.hpp"
+
+#include <fstream>
 
 int main() {
 	/*
@@ -18,7 +21,10 @@ int main() {
 	std::cout << "013: " << solve_p013() << std::endl;
 	std::cout << "014: " << solve_p014() << std::endl;
 	std::cout << "015: " << solve_p015() << std::endl;
+	std::cout << "016: " << solve_p016() << std::endl;
 
 	*/
-	std::cout << "016: " << solve_p016() << std::endl;
+	std::cout << "017: " << solve_p017() << std::endl;
+
+
 }
