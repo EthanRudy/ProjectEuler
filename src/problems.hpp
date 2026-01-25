@@ -24,4 +24,5 @@ int solve_p019();
 int solve_p020();
 int solve_p021();
 int solve_p022();
-int solve_p023();
+int solve_p023(); 
+std::string solve_p024();
