@@ -51,6 +51,10 @@ inline int sum_p_factors(int n) {
 	return sum;
 }
 
+inline bool abundant(int n) {
+	return sum_p_factors(n) > n;
+}
+
 
 inline int collatz_sequence_length(unsigned long long n) {
 	if (n == 1) { return 1; }

@@ -23,4 +23,5 @@ int solve_p018();
 int solve_p019();
 int solve_p020();
 int solve_p021();
-
+int solve_p022();
+int solve_p023();
