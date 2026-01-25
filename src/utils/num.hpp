@@ -1,5 +1,7 @@
 #pragma once
 
+#include <algorithm>
+
 
 inline void get_factors(int n, std::vector<int>& factors) {
 	if (n < 1) { return; }
@@ -17,6 +19,38 @@ inline void get_factors(int n, std::vector<int>& factors) {
 		}
 	}
 }
+
+inline int sum_factors(int n) {
+	if (n == 1) { return 1; }
+	if (n == 0) { return 0; }
+
+	std::vector<int> factors;
+	get_factors(n, factors);
+
+	int sum = 0;
+	for (int n : factors) {
+		sum += n;
+	}
+	return sum;
+}
+
+inline int sum_p_factors(int n) {
+	if (n == 1 || n == 0) { return 0; }
+
+	std::vector<int> factors;
+	get_factors(n, factors);
+
+	// I need them to be in order for this shortcut
+	std::sort(factors.begin(), factors.end());
+
+	int sum = 0;
+	for (int i = 0; i < factors.size() - 1; ++i) {
+		sum += factors[i];
+	}
+
+	return sum;
+}
+
 
 inline int collatz_sequence_length(unsigned long long n) {
 	if (n == 1) { return 1; }
