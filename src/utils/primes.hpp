@@ -2,12 +2,27 @@
 #include <vector>
 
 inline bool is_prime(int n) {
+	if (n <= 1) { return false; }
 	if (n == 2) { return true; }
 	if (n % 2 == 0) { return false; }
 
 	int max = std::sqrt(n) + 1;
 
 	for (int i = 2; i < max; ++i) {
+		if (n % i == 0) { return false; }
+	}
+
+	return true;
+}
+
+inline bool is_prime(long long n) {
+	if (n <= 1) { return false; }
+	if (n == 2) { return true; }
+	if (n % 2 == 0) { return false; }
+
+	int max = std::sqrt(n) + 1;
+
+	for (long long i = 2; i < max; ++i) {
 		if (n % i == 0) { return false; }
 	}
 
