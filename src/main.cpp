@@ -29,9 +29,10 @@ int main() {
 	std::cout << "021: " << solve_p021() << std::endl;
 	std::cout << "022: " << solve_p022() << std::endl;
 	std::cout << "023: " << solve_p023() << std::endl;
+	std::cout << "024: " << solve_p024() << std::endl;
 
 	*/
-	std::cout << "024: " << solve_p024() << std::endl;
+	std::cout << "025: " << solve_p025() << std::endl;
 
 
 }
