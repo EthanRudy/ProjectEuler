@@ -26,4 +26,5 @@ int solve_p021();
 int solve_p022();
 int solve_p023(); 
 std::string solve_p024();
-int solve_p025();
+int solve_p025(); 
+int solve_p026();
