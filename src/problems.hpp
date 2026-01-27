@@ -33,3 +33,4 @@ int solve_p028();
 int solve_p029(); 
 int solve_p030();
 int solve_p031();
+int solve_p032();

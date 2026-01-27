@@ -65,3 +65,14 @@ inline int collatz_sequence_length(unsigned long long n) {
 		return 1 + collatz_sequence_length(3 * n + 1);
 	}
 }
+
+inline bool is_pandigital(std::string& str) {
+	if (str.length() != 9) { return false; }
+	for (int i = 1; i < 10; ++i) {
+		if (std::count(str.begin(), str.end(), (i + '0')) != 1) {
+			return false;
+		}
+	}
+
+	return true;
+}
