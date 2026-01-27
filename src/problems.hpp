@@ -29,3 +29,4 @@ std::string solve_p024();
 int solve_p025(); 
 int solve_p026();
 int solve_p027();
+int solve_p028();
