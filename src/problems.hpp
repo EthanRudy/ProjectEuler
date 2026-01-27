@@ -32,3 +32,4 @@ int solve_p027();
 int solve_p028();
 int solve_p029(); 
 int solve_p030();
+int solve_p031();
