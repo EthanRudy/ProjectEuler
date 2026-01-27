@@ -18,6 +18,8 @@ inline void get_factors(int n, std::vector<int>& factors) {
 			}
 		}
 	}
+
+	std::sort(factors.begin(), factors.end());
 }
 
 inline int sum_factors(int n) {
