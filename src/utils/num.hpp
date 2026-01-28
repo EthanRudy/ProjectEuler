@@ -138,3 +138,13 @@ inline bool is_pent_number(unsigned long long n) {
 inline unsigned long long nth_hex_number(int n) {
 	return n * ((2 * n) - 1);
 }
+
+inline int next_odd_comp(int n) {
+	if (n % 2 == 0) { n += 1; }
+	else { n += 2; }
+	while (is_prime(n)) {
+		n += 2;
+	}
+
+	return n;
+}

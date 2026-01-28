@@ -27,7 +27,14 @@ inline bool is_prime(long long n) {
 	}
 
 	return true;
+}
 
+inline int next_prime(int p) {
+	for (int i = p + 1; ; ++i) {
+		if (is_prime(i)) {
+			return i;
+		}
+	}
 }
 
 inline void sieve_of_eratosthenes(int max, std::vector<int>& primes) {
