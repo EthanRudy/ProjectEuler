@@ -47,7 +47,8 @@ int main() {
 	std::cout << "039: " << solve_p039() << std::endl;
 	std::cout << "040: " << solve_p040() << std::endl;
 	std::cout << "041: " << solve_p041() << std::endl;
+	std::cout << "042: " << solve_p042() << std::endl;
 
 	*/
-	std::cout << "042: " << solve_p042() << std::endl;
+	std::cout << "043: " << solve_p043() << std::endl;
 }

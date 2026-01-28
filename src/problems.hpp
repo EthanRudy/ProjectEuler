@@ -43,4 +43,5 @@ int solve_p038();
 int solve_p039(); 
 int solve_p040(); 
 int solve_p041();
-int solve_p042();
+int solve_p042(); 
+unsigned long long solve_p043();
