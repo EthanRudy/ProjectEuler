@@ -40,4 +40,7 @@ int solve_p035();
 int solve_p036(); 
 int solve_p037(); 
 int solve_p038(); 
-int solve_p039();
+int solve_p039(); 
+int solve_p040(); 
+int solve_p041();
+int solve_p042();
