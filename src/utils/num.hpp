@@ -100,3 +100,17 @@ inline int f_digit_sum(int n) {
 
 	return sum;
 }
+
+inline std::string bin_str(int n) {
+	std::string bin = "";
+
+	int place = 1;
+	while (n > 0) {
+		bin += (n % 2) + '0';
+		n /= 2;
+	}
+
+	std::reverse(bin.begin(), bin.end());
+
+	return bin;
+}
