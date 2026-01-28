@@ -10,3 +10,8 @@ inline bool is_palindrome(std::string str) {
 	if (orig == str) { return true; }
 	return false;
 }
+
+inline std::string rotate(std::string str) {
+	char c = str[0];
+	return str.substr(1) + c;
+}
