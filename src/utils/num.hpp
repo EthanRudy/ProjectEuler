@@ -78,3 +78,25 @@ inline bool is_pandigital(std::string& str) {
 
 	return true;
 }
+
+inline int factorial(int n) {
+	int prod = 1;
+
+	while (n > 0) {
+		prod *= n;
+		--n;
+	}
+
+	return prod;
+}
+
+inline int f_digit_sum(int n) {
+	int sum = 0;
+
+	while (n > 0) {
+		sum += factorial(n % 10);
+		n /= 10;
+	}
+
+	return sum;
+}
