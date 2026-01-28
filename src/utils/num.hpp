@@ -115,10 +115,26 @@ inline std::string bin_str(int n) {
 	return bin;
 }
 
-inline int nth_tri_number(int n) {
+inline unsigned long long nth_tri_number(int n) {
 	return n * (n + 1) / 2;
 }
 
-inline int nth_pent_number(int n) {
+inline bool is_tri_number(unsigned long long n) {
+	unsigned long long x = sqrt(2 * n);
+	unsigned long long check = x * (x + 1) / 2;
+	return n == check;
+}
+
+inline unsigned long long nth_pent_number(int n) {
 	return n * ((3 * n) - 1) / 2;
+}
+
+inline bool is_pent_number(unsigned long long n) {
+	unsigned long long x = (1 + sqrt(24 * n + 1)) / 6;
+	auto check = x * (3 * x - 1) / 2;
+	return n == check;
+}
+
+inline unsigned long long nth_hex_number(int n) {
+	return n * ((2 * n) - 1);
 }
