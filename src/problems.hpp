@@ -51,3 +51,4 @@ int solve_p046();
 int solve_p047();
 std::string solve_p048(); 
 std::string solve_p049();
+int solve_p050();
