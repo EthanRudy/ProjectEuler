@@ -57,4 +57,6 @@ inline void sieve_of_eratosthenes(int max, std::vector<int>& primes) {
 			primes.push_back(i);
 		}
 	}
+
+	delete[] prime_arr;
 }
